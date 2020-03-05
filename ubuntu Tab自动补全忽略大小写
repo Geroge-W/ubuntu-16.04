@@ -1,7 +1,7 @@
 //ubuntu 16.04环境
 打开terminal终端
 sudo vi /etc/.inputrc  #必须加sudo权限，否则会无法保存！！！
-
+按“i”进入编辑模式
 ####################################################################
 此经验来自https://blog.csdn.net/guyue35/article/details/52994766
 ####################################################################
@@ -16,6 +16,8 @@ set completion-ignore-case on
 
 "\e[A": history-search-backward
 "\e[B": history-search-forward
+
+最后 Esc->:wq! 退出
 
 解释:
 show-all-if-ambiguous : 默认情况下，按下两次 <tab> 才会出现提示，现在只需要一次了。
