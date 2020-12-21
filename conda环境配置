@@ -1,0 +1,33 @@
+# 创建name=‘torch’的虚拟环境
+conda create -n torch python=3.7
+
+# 进入虚拟环境
+conda activate torch
+
+# 安装pytorch-gpu==1.4.0
+#正常情况下换成国内源会快上很多
+# vim ~/.condarc
+remote_connect_timeout_secs: 40.0
+remote_read_timeout_secs: 500.0
+channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/peterjc123/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+  - defaults
+show_channel_urls: True
+
+#查看cuda版本号cuda==10.0
+nvcc --version 或者 cat /usr/local/cuda/version.txt
+#查看cudnn版本号
+cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
+
+# CUDA 10.1 #实际为10.0,但实践证明好像也可以用！
+conda install pytorch==1.4.0 torchvision==0.5.0 cudatoolkit=10.1
+
+# 最后根据需要安装库就好了
+
+# 创建name=‘tf’的虚拟环境
+conda create -n torch python=3.6
