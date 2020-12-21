@@ -31,3 +31,8 @@ conda install pytorch==1.4.0 torchvision==0.5.0 cudatoolkit=10.1
 
 # 创建name=‘tf’的虚拟环境
 conda create -n torch python=3.6
+
+#安装tensorflow
+conda install tensorflow-gpu==1.15
+#安装keras
+conda install keras==2.3.6
