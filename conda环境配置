@@ -36,3 +36,9 @@ conda create -n torch python=3.6
 conda install tensorflow-gpu==1.15
 #安装keras
 conda install keras==2.3.6
+
+# 当conda在下载和创建虚拟环境时报错的解决办法：
+Error:anaconda ：An unexpected error has occurred. Conda has prepared the above report......
+方法：（源自：https://blog.csdn.net/LiuXiaoXueer/article/details/106823888）
+1. conda clean --packages && conda clean --all && conda update --al
+2. 遇到Proceed(y/n)? -> 输入y
